@@ -8,4 +8,5 @@ export { default as avatar_3 } from "./images/avatar_3.png";
 export { default as avatar_4 } from "./images/avatar_4.png";
 export { default as avatar_5 } from "./images/avatar_5.png";
 export { default as avatar_6 } from "./images/avatar_6.png";
+export { default as avatar_7 } from "./images/avatar_7.png";
 

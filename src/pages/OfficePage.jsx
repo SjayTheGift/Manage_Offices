@@ -1,27 +1,45 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import { GoArrowLeft } from "react-icons/go";
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useParams } from 'react-router-dom';
 
 import OfficeCard from "../components/OfficeCard";
 import SearchBox from "../components/SearchBox";
-import StuffMember from "../components/StuffMember";
+import StaffMember from "../components/StaffMember";
+import Spinner from '../components/Spinner';
 
-import { button, avatar_1, avatar_2, avatar_3 } from "../icons";
+import { button, avatar_1, avatar_2, avatar_7 } from "../icons";
 
 const OfficePage = () => {
-
-    const company_name = "Specno"
-    const stuff_members = 3
-    const phone_no = "084 555 3333"
-    const email = "Info@specno.com"
-    const capacity = "Office Capacity: 25"
-    const address = "10 Willie Van Schoor Dr, Bo Oakdale, Cape Town, 7530"
+    const { id } = useParams()
+    const [office, setOffice] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const location = useLocation();
 
+
+
+
+    useEffect(() => {
+        const fetchOffice = async () => {
+            try {
+                const res = await fetch(`/api/offices/${id}`);
+                const data = await res.json();
+                console.log(data)
+                setOffice(data)
+            } catch (error) {
+                console.log("Error fetching data", error)
+            } finally {
+                setLoading(false)
+            }
+        };
+        fetchOffice();
+    }, [])
+
+
+
+
     return (
-        <section className="w-full bg-[#F1F9FF] dark:bg-gray-900  px-8 xl:px-0">
+        <section className="w-full bg-[#F8FAFC] h-screen dark:bg-gray-900  px-8 xl:px-0">
             <div className="max-w-[1240px] mx-auto h-screen relative py-12">
                 <div className='flex justify-between items-center mb-11'>
                     <NavLink to='/'>
@@ -31,12 +49,7 @@ const OfficePage = () => {
                     <div></div>
                 </div>
                 <OfficeCard
-                    company_name={company_name}
-                    stuff_members={stuff_members}
-                    phone_no={phone_no}
-                    email={email}
-                    capacity={capacity}
-                    address={address}
+                    office={office}
                     location={location}
                 />
                 <SearchBox />
@@ -47,26 +60,20 @@ const OfficePage = () => {
                         <span>11</span>
                     </div>
 
-                    <StuffMember
+                    {office?.staffs?.map((staff) => (
 
-                        avatar={avatar_1}
-                        name={"Jacques Jordaan"}
-                    />
-                    <StuffMember
+                        <StaffMember
+                            staff={staff}
+                        />
+                    ))}
 
-                        avatar={avatar_2}
-                        name={"Daniel Novitzkas"}
-                    />
 
-                    <StuffMember
 
-                        avatar={avatar_3}
-                        name={"Brandon Watkins"}
-                    />
+
 
                 </div>
 
-                <div className="absolute bottom-20 right-0 z-10">
+                <div className="absolute bottom-10 right-0 z-10">
                     <img src={button} className="hover:cursor-pointer" />
                 </div>
             </div>
@@ -74,5 +81,10 @@ const OfficePage = () => {
         </section>
     )
 }
+
+// const officeLoader = async ({params}) =>{
+//     const res = await fetch(`/api/offices/${params.id}`);
+//     const data = await res.json();
+// }
 
 export default OfficePage

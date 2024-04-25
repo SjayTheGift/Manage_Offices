@@ -1,12 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-
-
-import { IoCloseCircleOutline } from "react-icons/io5";
-
-
-
-import { MdMarkEmailRead } from "react-icons/md";
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
@@ -15,41 +8,37 @@ import AddOfficePage from "./pages/AddOfficePage";
 import EditOfficePage from "./pages/EditOfficePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+import offices from './offices.json';
+
 function App() {
 
+  const [offices, setOffices] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchOffices = async () => {
+      try {
+        const res = await fetch("/api/offices");
+        const data = await res.json();
+        setOffices(data)
+      } catch (error) {
+        console.log("Error fetching data", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchOffices();
+  }, [])
 
 
-  // const router = createBrowserRouter(
-  //   createRoutesFromElements(
-  //     <Route>
-  //       <Route path='/' element={<HomePage />}></Route>
-  //       <Route path='/office' element={<OfficePage />} />
-  //       <Route path='/add-office' element={<AddOfficePage />} />
-  //       <Route path='/edit-office' element={<EditOfficePage />} />
-  //       {/* <Route
-  //         path='/edit-job/:id'
-  //         element={<EditJobPage updateJobSubmit={updateJob} />}
-  //         loader={jobLoader}
-  //       />
-  //       <Route
-  //         path='/jobs/:id'
-  //         element={<JobPage deleteJob={deleteJob} />}
-  //         loader={jobLoader}
-  //       /> */}
-  //       <Route path='*' element={<NotFoundPage />} />
-  //     </Route>
-  //   )
-  // );
-
-  // return <RouterProvider router={router} />;
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/office" element={<OfficePage />} />
+        <Route path="/" element={<HomePage offices={offices} loading={loading} />} />
+        <Route path="/office/:id" element={<OfficePage />} />
         <Route path='/add-office' element={<AddOfficePage />} />
-        <Route path='/edit-office' element={<EditOfficePage />} />
+        <Route path='/edit-office/:id' element={<EditOfficePage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </Router>

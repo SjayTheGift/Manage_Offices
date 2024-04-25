@@ -1,17 +1,11 @@
 import { useState } from "react";
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import OfficeCard from "../components/OfficeCard";
 import { button } from "../icons";
+import Spinner from "../components/Spinner";
 
-const HomePage = () => {
-    const company_name = "Specno"
-    const stuff_members = 5
-    const phone_no = "084 555 3333"
-    const email = "Info@specno.com"
-    const capacity = "Office Capacity: 25"
-    const address = "10 Willie Van Schoor Dr, Bo Oakdale, Cape Town, 7530"
-
+const HomePage = ({ offices, loading }) => {
     const location = useLocation();
 
     return (
@@ -21,40 +15,23 @@ const HomePage = () => {
                     All Offices
                 </h1>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <OfficeCard
-                        company_name={company_name}
-                        stuff_members={stuff_members}
-                        phone_no={phone_no}
-                        email={email}
-                        capacity={capacity}
-                        address={address}
-                        location={location}
-                    />
-                    <OfficeCard
-                        company_name={company_name}
-                        stuff_members={stuff_members}
-                        phone_no={phone_no}
-                        email={email}
-                        capacity={capacity}
-                        address={address}
-                        location={location}
-                    />
-                    <OfficeCard
-                        company_name={company_name}
-                        stuff_members={stuff_members}
-                        phone_no={phone_no}
-                        email={email}
-                        capacity={capacity}
-                        address={address}
-                        location={location}
-                    />
+                {loading ? (
+                    <div className="flex justify-center items-center">
+                        <Spinner />
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {offices.map((office) => (
+                            <OfficeCard
+                                key={office.id}
+                                office={office}
+                                location={location}
+                            />
+                        ))}
+                    </div>
+                )}
 
-
-                </div>
-
-
-                <div className="absolute bottom-20 right-0 z-10">
+                <div className="absolute bottom-10 right-0 z-10">
                     <img src={button} className="hover:cursor-pointer" />
                 </div>
 

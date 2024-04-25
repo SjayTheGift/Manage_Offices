@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#0D4477"
+        primary: "#0D4477",
+        btnPrimary: "#489DDA",
+        btnSecondary: "#F44336",
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

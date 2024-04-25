@@ -1,0 +1,91 @@
+{
+    "offices": [
+        {
+            "id": "1",
+            "company_name": "Specno",
+            "stuff_members": "6",
+            "phone_no": "084 555 3333",
+            "email": "Info@specno.com",
+            "capacity": "25",
+            "address": "10 Willie Van Schoor Dr, Bo Oakdale, Cape Town, 7530",
+            "staffs": [
+                {
+                    "staff_id": "1",
+                    "first_name": "Daniel",
+                    "last_name": "Novitzkas",
+                    "avatar": "/src/images/avatar_2.png"
+                },
+                {
+                    "staff_id": "2",
+                    "first_name": "Brandon",
+                    "last_name": "Watkins",
+                    "avatar": "/src/images/avatar_3.png"
+                },
+                {
+                    "staff_id": "3",
+                    "first_name": "Rayn",
+                    "last_name": "Duell",
+                    "avatar": "/src/images/avatar_4.png"
+                },
+                {
+                    "staff_id": "4",
+                    "first_name": "Jenner",
+                    "last_name": "Venter",
+                    "avatar": "/src/images/avatar_5.png"
+                },
+                {
+                    "staff_id": "5",
+                    "first_name": "Janke B",
+                    "last_name": "Du Toit",
+                    "avatar": "/src/images/avatar_6.png"
+                },
+                {
+                    "staff_id": "6",
+                    "first_name": "Jacques",
+                    "last_name": "Jordaan",
+                    "avatar": "/src/images/avatar_7.png"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "company_name": "ByteOrbit",
+            "stuff_members": "2",
+            "phone_no": "021 492 5184",
+            "email": "Info@btyeorbit.com",
+            "capacity": "25",
+            "address": "2nd Floor Sable Park Bridgeways Precinct, Century City, Cape Town, 7446",
+            "staffs": [
+                {
+                    "staff_id": "1",
+                    "first_name": "Mark",
+                    "last_name": "Novitzkas",
+                    "avatar": "/src/images/avatar_1.png"
+                },
+                {
+                    "staff_id": "2",
+                    "first_name": "Jeff",
+                    "last_name": "Enzo",
+                    "avatar": "/src/images/avatar_6.png"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "company_name": "Old Mutual",
+            "stuff_members": "1",
+            "phone_no": "021 509 9111",
+            "email": "Info@oldmutual.com",
+            "capacity": "25",
+            "address": "Mutualpark, Jan Smuts Dr, Pinelands, Cape Town, 7405",
+            "staffs": [
+                {
+                    "staff_id": "1",
+                    "first_name": "Greg",
+                    "last_name": "Du Plies",
+                    "avatar": "/src/images/avatar_1.png"
+                }
+            ]
+        }
+    ]
+}
