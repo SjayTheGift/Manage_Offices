@@ -1,91 +1,154 @@
 {
-    "offices": [
-        {
-            "id": "1",
-            "company_name": "Specno",
-            "stuff_members": "6",
-            "phone_no": "084 555 3333",
-            "email": "Info@specno.com",
-            "capacity": "25",
-            "address": "10 Willie Van Schoor Dr, Bo Oakdale, Cape Town, 7530",
-            "staffs": [
-                {
-                    "staff_id": "1",
-                    "first_name": "Daniel",
-                    "last_name": "Novitzkas",
-                    "avatar": "/src/images/avatar_2.png"
-                },
-                {
-                    "staff_id": "2",
-                    "first_name": "Brandon",
-                    "last_name": "Watkins",
-                    "avatar": "/src/images/avatar_3.png"
-                },
-                {
-                    "staff_id": "3",
-                    "first_name": "Rayn",
-                    "last_name": "Duell",
-                    "avatar": "/src/images/avatar_4.png"
-                },
-                {
-                    "staff_id": "4",
-                    "first_name": "Jenner",
-                    "last_name": "Venter",
-                    "avatar": "/src/images/avatar_5.png"
-                },
-                {
-                    "staff_id": "5",
-                    "first_name": "Janke B",
-                    "last_name": "Du Toit",
-                    "avatar": "/src/images/avatar_6.png"
-                },
-                {
-                    "staff_id": "6",
-                    "first_name": "Jacques",
-                    "last_name": "Jordaan",
-                    "avatar": "/src/images/avatar_7.png"
-                }
-            ]
-        },
-        {
-            "id": "2",
-            "company_name": "ByteOrbit",
-            "stuff_members": "2",
-            "phone_no": "021 492 5184",
-            "email": "Info@btyeorbit.com",
-            "capacity": "25",
-            "address": "2nd Floor Sable Park Bridgeways Precinct, Century City, Cape Town, 7446",
-            "staffs": [
-                {
-                    "staff_id": "1",
-                    "first_name": "Mark",
-                    "last_name": "Novitzkas",
-                    "avatar": "/src/images/avatar_1.png"
-                },
-                {
-                    "staff_id": "2",
-                    "first_name": "Jeff",
-                    "last_name": "Enzo",
-                    "avatar": "/src/images/avatar_6.png"
-                }
-            ]
-        },
-        {
-            "id": "3",
-            "company_name": "Old Mutual",
-            "stuff_members": "1",
-            "phone_no": "021 509 9111",
-            "email": "Info@oldmutual.com",
-            "capacity": "25",
-            "address": "Mutualpark, Jan Smuts Dr, Pinelands, Cape Town, 7405",
-            "staffs": [
-                {
-                    "staff_id": "1",
-                    "first_name": "Greg",
-                    "last_name": "Du Plies",
-                    "avatar": "/src/images/avatar_1.png"
-                }
-            ]
-        }
-    ]
+  "offices": [
+    {
+      "id": "1",
+      "company_name": "Specno",
+      "stuff_members": "6",
+      "phone_no": "084 555 3333",
+      "email": "Info@specno.com",
+      "capacity": "25",
+      "address": "10 Willie Van Schoor Dr, Bo Oakdale, Cape Town, 7530",
+      "color": "#0072E8"
+    },
+    {
+      "id": "2",
+      "company_name": "ByteOrbit",
+      "stuff_members": "2",
+      "phone_no": "021 492 5184",
+      "email": "Info@byteorbit.com",
+      "capacity": "25",
+      "address": "2nd Floor Sable Park Bridgeways Precinct, Century City, Cape Town, 7446",
+      "color": "#FF006E"
+    },
+    {
+      "id": "defe68da-9e5f-4c6a-9355-a88c0b729848",
+      "company_name": "test",
+      "address": "test adds",
+      "email": "test@me.com",
+      "phone_no": "0122555456",
+      "capacity": "10",
+      "color": "#8338EC"
+    }
+  ],
+  "staffs": [
+    {
+      "id": "1",
+      "first_name": "John",
+      "last_name": "Doe",
+      "avatar": "/src/images/avatar_1.png",
+      "office_id": "1"
+    },
+    {
+      "id": "2",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "avatar": "/src/images/avatar_2.png",
+      "office_id": "1"
+    },
+    {
+      "id": "3",
+      "first_name": "Michael",
+      "last_name": "Johnson",
+      "avatar": "/src/images/avatar_3.png",
+      "office_id": "1"
+    },
+    {
+      "id": "4",
+      "first_name": "Emily",
+      "last_name": "Brown",
+      "avatar": "/src/images/avatar_4.png",
+      "office_id": "1"
+    },
+    {
+      "id": "5",
+      "first_name": "David",
+      "last_name": "Wilson",
+      "avatar": "/src/images/avatar_5.png",
+      "office_id": "1"
+    },
+    {
+      "id": "6",
+      "first_name": "Olivia",
+      "last_name": "Davis",
+      "avatar": "/src/images/avatar_6.png",
+      "office_id": "1"
+    },
+    {
+      "id": "7",
+      "first_name": "Robert",
+      "last_name": "Lee",
+      "avatar": "/src/images/avatar_7.png",
+      "office_id": "2"
+    },
+    {
+      "id": "8",
+      "first_name": "Sophia",
+      "last_name": "Taylor",
+      "avatar": "/src/images/avatar_5.png",
+      "office_id": "2"
+    },
+    {
+      "id": "dee6f918-9379-46c1-93b3-0cf814dfd3ba",
+      "first_name": "Esethu",
+      "last_name": "Jonas",
+      "avatar": "/src/images/avatar_3.png",
+      "office_id": "1"
+    },
+    {
+      "id": "6a85aa20-7ba4-4dae-ae2c-616322733fa0",
+      "first_name": "sipho",
+      "last_name": "chris",
+      "avatar": "/src/images/avatar_4.png",
+      "office_id": "1"
+    },
+    {
+      "id": "2c7a4a63-67bb-4a94-91f4-ef9af54bb75a",
+      "first_name": "Esethu",
+      "last_name": "Jonas",
+      "avatar": "/src/images/avatar_3.png",
+      "office_id": "defe68da-9e5f-4c6a-9355-a88c0b729848"
+    },
+    {
+      "id": "afd992d1-59ae-4b2f-bf66-3cd3eedd6f12",
+      "first_name": "Esethu",
+      "last_name": "Jonas",
+      "avatar": "/src/images/avatar_3.png",
+      "office_id": "defe68da-9e5f-4c6a-9355-a88c0b729848"
+    },
+    {
+      "id": "c8d77da4-183f-499c-ab3c-8bced73d53d1",
+      "first_name": "Esethu",
+      "last_name": "Jonas",
+      "avatar": "/src/images/avatar_3.png",
+      "office_id": "defe68da-9e5f-4c6a-9355-a88c0b729848"
+    },
+    {
+      "id": "3ea66f5a-0314-4b73-acba-0514ba1ea7c4",
+      "first_name": "Esethu",
+      "last_name": "Jonas",
+      "avatar": "/src/images/avatar_3.png",
+      "office_id": "defe68da-9e5f-4c6a-9355-a88c0b729848"
+    },
+    {
+      "id": "396eb292-fd92-48ee-b606-408e3861608b",
+      "first_name": "Esethu",
+      "last_name": "Jonas",
+      "avatar": "/src/images/avatar_3.png",
+      "office_id": "defe68da-9e5f-4c6a-9355-a88c0b729848"
+    },
+    {
+      "id": "7917e7c1-270e-4e81-b16f-53e214ee0ffb",
+      "first_name": "Esethu",
+      "last_name": "Jonas",
+      "avatar": "/src/images/avatar_3.png",
+      "office_id": "defe68da-9e5f-4c6a-9355-a88c0b729848"
+    },
+    {
+      "id": "4688ce91-0602-47b8-bf0e-1efcebb7e76e",
+      "first_name": "dddddddd",
+      "last_name": "Jonas",
+      "avatar": "/src/images/avatar_3.png",
+      "office_id": "defe68da-9e5f-4c6a-9355-a88c0b729848"
+    }
+  ]
 }

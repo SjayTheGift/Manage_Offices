@@ -19,12 +19,14 @@ const OfficeCard = ({ office, location }) => {
 
     return (
         <div className="w-full md:h-auto">
-            <div className="bg-white rounded-lg shadow p-4 border-l-8 border-indigo-500">
+            <div className={`bg-white rounded-lg shadow p-4 border-l-8 border-${office.color}`} style={{ borderLeftColor: office.color }}>
                 <div className="flex justify-between items-center mb-2">
                     <h3 className="text-2xl md:text-3xl font-bold mb-2">
                         <Link to={`/office/${office.id}`}>{office.company_name}</Link >
                     </h3>
-                    <MdOutlineModeEdit size={25} className="hover:cursor-pointer text-primary" />
+                    <Link to={`/edit-office/${office.id}`}>
+                        <MdOutlineModeEdit size={25} className="hover:cursor-pointer text-primary" />
+                    </Link>
                 </div>
                 <div className={`mb-4 pb-2 flex gap-4 items-center w-full ${location.pathname == '/' ? 'border-b-2 border-b-primary ' : ''}`}>
                     <img src={people_gray} className="" alt="people icon" />
